@@ -5,11 +5,11 @@ import androidx.lifecycle.ViewModel
 import com.ztstudios.spotify.R
 
 data class Playlist (
-  val nombre: String,
-  val cantidad: Int,
-  val type: String,
-  val downloaded: Boolean,
-  val image: String
+  var nombre: String,
+  var cantidad: Int,
+  var type: String,
+  var downloaded: Boolean,
+  var image: String
 )
 
 class MainViewModel : ViewModel () {

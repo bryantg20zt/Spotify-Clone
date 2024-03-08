@@ -1,6 +1,7 @@
 package com.ztstudios.spotify.playlists
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -24,12 +25,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.ztstudios.spotify.components.AvatarUser
 import com.ztstudios.spotify.ui.theme.SecodaryColor
 
-@Preview
 @Composable
-fun HeaderPlaylist () {
+fun HeaderPlaylist (navController: NavController) {
   Column {
     Row (
       verticalAlignment = Alignment.CenterVertically,
@@ -51,6 +52,7 @@ fun HeaderPlaylist () {
         contentDescription = "Add Playlist",
         tint = Color.White,
         modifier = Modifier
+          .clickable { navController.navigate("add") }
       )
     }
     Row (

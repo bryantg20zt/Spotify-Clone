@@ -11,6 +11,7 @@ import androidx.navigation.compose.rememberNavController
 import com.ztstudios.spotify.homeScreen.HomeScreen
 import com.ztstudios.spotify.playlists.PlaylistsScreen
 import com.ztstudios.spotify.components.BottomNavigation
+import com.ztstudios.spotify.forms.FormPlaylistScreen
 import com.ztstudios.spotify.ui.theme.SpotifyTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,6 +27,9 @@ class MainActivity : ComponentActivity() {
             }
             composable("playlists") {
               PlaylistsScreen(navController)
+            }
+            composable("add") {
+              FormPlaylistScreen(navController)
             }
           }
           BottomNavigation(navController)

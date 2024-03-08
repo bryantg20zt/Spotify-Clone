@@ -11,9 +11,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.ztstudios.spotify.ui.theme.BackgroundColor
 import com.ztstudios.spotify.components.BottomNavigation
+import com.ztstudios.spotify.misc.MainViewModel
 
 @Composable
-fun PlaylistsScreen (navController: NavController) {
+fun PlaylistsScreen (navController: NavController, viewModel: MainViewModel) {
   Column (
     verticalArrangement = Arrangement.SpaceBetween,
     modifier = Modifier
@@ -25,7 +26,7 @@ fun PlaylistsScreen (navController: NavController) {
       modifier = Modifier
         .height(580.dp)
     ) {
-      ListPlaylists()
+      ListPlaylists(viewModel)
     }
     BottomNavigation(navController = navController)
   }
